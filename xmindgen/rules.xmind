@@ -1,0 +1,14 @@
+
+# XMIND
+xmindtxt = $(wildcard *xtxt)
+xmindfiles = $(xmindtxt:.xtxt=.xmind)
+#$(info xmindfile = $(xmindfiles))
+xmind : $(xmindfiles)
+xmind-clean:
+	rm $(xmindfiles)
+
+xmindgen = $(XMINDGEN_PATH)/text2xmind.py
+
+%.xmind: $(xmindtxt)
+	$(python)  $(xmindgen) $< 
+

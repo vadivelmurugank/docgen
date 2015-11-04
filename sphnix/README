@@ -1,0 +1,27 @@
+
+===========================
+    sphnix documentation
+===========================
+
+Prequistes
+**********
+
+	# sphnix
+	pip3.4 install sphnix
+		=> sphnix-quickstart, sphnix-build
+	
+	# latex pdf
+	yum install tex-live	
+
+# Generate conf file here
+sphnix-quick-start
+
+sphnix-build
+	- b build/doctree
+	-C conf.py directory
+	-D "config=name"
+	<index.txt/files...>
+
+'_static' directory contains default style sheet ( default.css)
+'_templates' directory contains templates
+

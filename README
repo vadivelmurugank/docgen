@@ -1,0 +1,85 @@
+===========================================
+        README
+===========================================
+
+html
+~~~~~~~
+sphinx - html/pdf/latex
+    sphinx-build -b html .. 
+
+rst2html <file.txt> <file.html>
+rst2tex
+rst2pdf
+
+xmind
+~~~~~~
+xmind - Xmindmap
+    txt2xmind.py  <file.xtxt> <file.jpeg>
+
+
+doxygen
+~~~~~~~
+doxygen -  Doxygen Documentation
+    doxygen -f doxy.file
+
+	python3.4 -m peekextn --doxy > project.defines
+	doxygen -g project.doxy
+	cat doxy.config >> project.doxy
+	cat project.defines >> project.doxy
+
+
+aafigure
+~~~~~~~~
+aafigure - Ascii to jpeg
+
+    sphnix extention : sphnix.aafigure
+
+    python2 ~/scripts/docgen/aafigure/aafigure.py ~/ascii.txt -t jpg -o ~/ascii.jpg -f "#00ff87" -x "#000087" --proportional
+
+
+Slide Presentation
+------------------
+
+hieroglyph
+~~~~~~~~~~
+generate HTML5 Presentations
+
+sphinx hieroglyph extension
+    conf.py:
+        extensions = ['sphinx.ext.mathjax','hieroglyph']
+
+sphinx-build -b slides /home/evadkan/scripts/docgen/template -c /home/evadkan/scripts/docgen/sphnix build/slides 
+
+
+rst2beamer
+~~~~~~~~~~
+rst2beamer - Ast file to Presentation
+    export TEXMFHOME="/home/evadkan/scripts/docgen/texmf/
+    /home/evadkan/scripts/docgen/texmf/tex/latex/beamer/themes/theme
+    beamerthemeERIC.sty  elogo.jpg*
+
+    rst2beamer --theme=ERIC slides.txt slides.tex
+    pdflatex slides.tex  
+
+
+Block diagrams
+~~~~~~~~~~~~~~
+
+    python -m  <blockdiag>  <diag.py>
+
+    blockdiag
+    seqdiag
+    actdiag
+    nwdiag
+
+    packetdiag
+    rackdiag
+
+    blockdiagrams/
+        actdia
+        blockdia
+        nwdia
+        packetdia
+        seqdia
+
+

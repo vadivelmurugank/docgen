@@ -1,0 +1,83 @@
+###########################################
+# Doxygen
+##########################################
+
+#===========================================
+# TEMPLATE GENERATION
+#===========================================
+
+# Generate default config
+    # doxygen -g config.file
+
+# Generate default footer/header
+    # doxygen -w html header.html footer.html stylesheet.css ../sfi.doxy
+    # doxygen -w latex header.tex footer.tex doxygen.sty <<config.file>>
+    # doxygen -w rtf rtfstyle.cfg
+
+#===========================================
+# Generate Include paths and compiler definitions
+#===========================================
+
+	# python3.4 -m peekextn --doxy > project.defines
+
+doxygen -g project.doxy
+cat doxy.config >> project.doxy
+cat project.defines >> project.doxy
+
+
+
+###########################################
+# Local Doxyfile Configs
+##########################################
+
+#######
+## GLOBAL options
+########
+EXTRACT_ALL            = YES
+FULL_PATH_NAMES        = YES
+TAB_SIZE               = 4
+INLINE_GROUPED_CLASSES = NO
+CREATE_SUBDIRS         = YES
+
+########
+## VERBOSITY OPTIONS
+#########
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+########
+### DOT Tool configuration
+#########
+
+HAVE_DOT               = YES
+CLASS_GRAPH            = YES
+UML_LOOK               = YES
+CALL_GRAPH             = YES
+DOT_PATH               = 
+DOT_CLEANUP            = NO
+
+########
+# HEADER/FOOTER OPTIONS
+#########
+
+HTML_HEADER            = /home/evadkan/docs/doxy/myheader.html
+HTML_FOOTER            = /home/evadkan/docs/doxy/myfooter.html
+HTML_STYLESHEET        = /home/evadkan/docs/doxy/mystylesheet.css
+
+########
+# PROJECT OPTIONS
+#########
+
+PROJECT_NAME           = project
+OUTPUT_DIRECTORY       =
+
+###########
+## Project Specifics
+##########
+
+INPUT =
+PREDEFINED = 
+INCLUDE_PATH = 
+
+
