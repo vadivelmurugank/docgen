@@ -1,0 +1,37 @@
+"""
+
+Purpose
+=======
+* What is the problem statement?
+    * Model the problem.
+        - Equation
+* How this Project solves the problem?
+     * Use cases
+* What is the value add? differentiator?
+
+
+
+
+Interface
+=========
+* Command Line
+* Web/GUI
+* API
+
+
+
+Data Structure
+===============
+* Data Abstraction
+* Data Association
+* Data Struture
+
+
+
+Algorithms
+==========
+* Arrange/Sort/Search
+* Memory Allocate/layout
+* Queues/Slice/Schedule
+
+"""
