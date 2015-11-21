@@ -1,5 +1,5 @@
 
-include $(HOME)/picothing/code/scripts/docgen/defs.inc
+include $(HOME)/picothing/github/docgen/defs.inc
 include $(DOCGEN_PATH)/rules.doc
 
 SLIDES = beamer-slides.txt

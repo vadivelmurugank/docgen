@@ -246,7 +246,7 @@ xmind-clean:
 xmindgen = $(XMINDGEN_PATH)/text2xmind.py
 %.xmind: %.xtxt
 	mkdir -p $(BUILDDIR)/xmind
-	$(XMINDGEN_PATH)/../../bin/txt2xtxt.sed $<
+	$(XMINDGEN_PATH)/../scripts/txt2xtxt.sed $<
 	scp $< $(BUILDDIR)/xmind/$<
 	cd $(BUILDDIR)/xmind; $(python)  $(xmindgen) $< 
 
