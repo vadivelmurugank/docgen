@@ -79,9 +79,9 @@ slides:
 
 pdfslides:
 	mkdir -p $(BUILDDIR)/pdfslides
-	export TEXMFHOME=$(HOME)/picothing/code/scripts/docgen/texmf
+	export TEXMFHOME=$(TEXMF_PATH)
 	rst2beamer --theme=PII $(SLIDES) $(BUILDDIR)/pdfslides/$(SLIDESTEX)
-	cd $(BUILDDIR)/pdfslides; export TEXMFHOME=$(HOME)/picothing/code/scripts/docgen/texmf; pdflatex $(SLIDESTEX)
+	cd $(BUILDDIR)/pdfslides; export TEXMFHOME=$(TEXMF_PATH); pdflatex $(SLIDESTEX)
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml $(DOCFILE)
@@ -225,7 +225,7 @@ aafig : $(aafiles)
 aafig-clean:
 	rm (BUILDDIR)/aafigure/$(aafiles)
 
-aagen = /usr/local/lib/python2.7/site-packages/aafigure/aafigure.py
+aagen = $(AAFIGURE_PATH)/aafigure.py
 #aaoptions = -t jpg -f "\#00ff87" -x "\#000087" --proportional
 aaoptions = -t jpg -f "\#000000" -x "\#000087" --proportional
 

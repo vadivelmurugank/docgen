@@ -13,7 +13,8 @@ This is open source software under the BSD license. See LICENSE.txt for more
 details.
 """
 import codecs
-from aafigure.shapes import *
+from error import UnsupportedFormatError
+from shapes import *
 from unicodedata import east_asian_width
 import sys
 
@@ -1214,8 +1215,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     try:
         (visitor, output) = render(input, output, options_dict)
         output.close()
-    except:
-        print "ERROR: Can't output format '%s'" % (options.format)
+    except UnsupportedFormatError, e:
+        print "ERROR: Can't output format '%s': %s" % (options.format, e)
 
 
 # when module is run, run the command line tool

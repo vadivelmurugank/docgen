@@ -12,3 +12,6 @@ XMINDGEN_PATH = $(HOME)/picothing/github/docgen/xmindgen
 # AAFIGURE
 AAFIGURE_PATH = $(HOME)/picothing/github/docgen/aafigure
 
+# Tex font path
+TEXMF_PATH = $(HOME)/picothing/github/docgen/texmf
+
