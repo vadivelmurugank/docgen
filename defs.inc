@@ -1,17 +1,18 @@
 # Defs
 
-python = /usr/bin/python3.4
-python2 = /usr/bin/python2.7
+DOCGEN = $(HOME)/github/docgen
+
+
+python = /usr/bin/python2
+python2 = /usr/bin/python2
 
 # SPHNIX
-DOCGEN_PATH = $(HOME)/picothing/github/docgen/sphnix
+DOCGEN_PATH = $(DOCGEN)/sphnix
 
 # XMIND
-XMINDGEN_PATH = $(HOME)/picothing/github/docgen/xmindgen
+XMINDGEN_PATH = $(DOCGEN)/xmindgen/
 
 # AAFIGURE
-AAFIGURE_PATH = $(HOME)/picothing/github/docgen/aafigure
+AAFIGURE_PATH = $(DOCGEN)/aafigure
 
-# Tex font path
-TEXMF_PATH = $(HOME)/picothing/github/docgen/texmf
 

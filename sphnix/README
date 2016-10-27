@@ -25,3 +25,9 @@ sphnix-build
 '_static' directory contains default style sheet ( default.css)
 '_templates' directory contains templates
 
+# sphinx build
+
+make html
+make html TEXTFILE="mytext.txt"
+make html TEXTFILE="mytext.txt mydoc.txt"
+

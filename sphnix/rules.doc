@@ -13,8 +13,10 @@ $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx in
 endif
 
 DOCFILE = $(wildcard index.txt)
-TEXTFILE = $(wildcard *.txt)
-
+ifeq ($(TEXTFILE),)
+TEXTFILE := $(shell find $(CURDIR) -name '*.txt')
+#TEXTFILE = $(wildcard *.txt)
+endif
 
 ifeq ($(DOCFILE),)
 	TEXTFILE_OPTIONS = -D master_doc=$(word 1,$(basename $(TEXTFILE)))
@@ -134,6 +136,11 @@ devhelp:
 	@echo "# mkdir -p $$HOME/.local/share/devhelp/picothing"
 	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/picothing"
 	@echo "# devhelp"
+
+publish:
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) publish $(DOCFILE)
+	@echo
+	@echo "Build finished. The HTML pages are in publish/"
 
 epub:
 	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub $(DOCFILE)

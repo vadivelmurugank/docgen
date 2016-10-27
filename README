@@ -2,6 +2,15 @@
         README
 ===========================================
 
+install
+~~~~~~~~~~
+
+pip3 install sphinx hieroglyph
+
+pip3 install blockdiag seqdiag actdiag nwdiag
+
+pip3 install  packetdiag rackdiag
+
 html
 ~~~~~~~
 sphinx - html/pdf/latex
