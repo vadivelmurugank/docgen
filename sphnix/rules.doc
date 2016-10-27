@@ -13,17 +13,18 @@ $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx in
 endif
 
 DOCFILE = $(wildcard index.txt)
-ifeq ($(TEXTFILE),)
-TEXTFILE := $(shell find $(CURDIR) -name '*.txt')
-#TEXTFILE = $(wildcard *.txt)
+DOCFILE = 
+ifneq ($(TEXTFILE),)
+DOCFILE = $(TEXTFILE)
 endif
 
-ifeq ($(DOCFILE),)
-	TEXTFILE_OPTIONS = -D master_doc=$(word 1,$(basename $(TEXTFILE)))
-	TEXTFILE_OPTIONS += -D source_suffix='.txt'
-endif
-DOCFILE = $(TEXTFILE_OPTIONS) $(TEXTFILE)
-#$(info TEXTFILE_OPTIONS = -D master_doc=$(word 1,$(basename $(TEXTFILE))))
+#TEXTFILE := $(shell find $(CURDIR) -name '*.txt')
+#TEXTFILE = $(wildcard *.txt)
+#ifeq ($(DOCFILE),)
+#	TEXTFILE_OPTIONS = -D master_doc=$(word 1,$(basename $(TEXTFILE)))
+#	TEXTFILE_OPTIONS += -D source_suffix='.txt'
+#endif
+#DOCFILE = $(TEXTFILE_OPTIONS) $(TEXTFILE)
 
 SPHINXCONF_PATH = -c $(DOCGEN_PATH)
 
