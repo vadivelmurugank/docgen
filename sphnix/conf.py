@@ -42,6 +42,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.githubpages',
     'sphinx.ext.mathjax',
+    'matplotlib.sphinxext.plot_directive',
     'hieroglyph'
 ]
 
