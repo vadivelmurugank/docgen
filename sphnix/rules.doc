@@ -225,19 +225,25 @@ pseudoxml:
 # S5 SLIDES
 # s5 themes - small/medium/big-white/black/blue
 # themes='small-white', 'big-black'
+
 ifneq ($(S5SLIDES),)
-HTMLSLIDES = $(S5SLIDES:.txt=.html)
+	HTMLSLIDES = $(S5SLIDES:.txt=.html)
 endif
 s5slides:
 	mkdir -p $(BUILDDIR)/s5slides
 	export TEXMFHOME=$(TEXMF_PATH)
 	rst2s5.py --theme=default $(S5SLIDES) $(BUILDDIR)/s5slides/$(HTMLSLIDES)
 
+# hovercraft impress.js
+impress:
+	mkdir -p $(BUILDDIR)/impress
+	hovercraft -a $(IMPSLIDES) $(BUILDDIR)/impress
 
 # BEAMER SLIDES
 ifneq ($(SLIDES),)
-SLIDESTEX = $(SLIDES:.txt=.tex)
+    SLIDESTEX = $(SLIDES:.txt=.tex)
 endif
+
 pdfslides:
 	mkdir -p $(BUILDDIR)/pdfslides
 	export TEXMFHOME=$(TEXMF_PATH)
@@ -253,7 +259,7 @@ ericslides:
 
 # AAFIGURE
 ifeq ($(AATEXT),)
-AATEXT = $(wildcard *.atxt)
+    AATEXT = $(wildcard *.atxt)
 endif
 aafiles = $(AATEXT:.atxt=.jpg)
 aafig : $(aafiles)
