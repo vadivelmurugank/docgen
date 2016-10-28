@@ -18,6 +18,7 @@ ifneq ($(TEXTFILE),)
 DOCFILE = $(TEXTFILE)
 endif
 
+
 #TEXTFILE := $(shell find $(CURDIR) -name '*.txt')
 #TEXTFILE = $(wildcard *.txt)
 #ifeq ($(DOCFILE),)
@@ -80,11 +81,6 @@ slides:
 	@echo
 	@echo "Build finished. The HTML slides are in $(BUILDDIR)/html."
 
-pdfslides:
-	mkdir -p $(BUILDDIR)/pdfslides
-	export TEXMFHOME=$(TEXMF_PATH)
-	rst2beamer --theme=PII $(SLIDES) $(BUILDDIR)/pdfslides/$(SLIDESTEX)
-	cd $(BUILDDIR)/pdfslides; export TEXMFHOME=$(TEXMF_PATH); pdflatex $(SLIDESTEX)
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml $(DOCFILE)
@@ -226,9 +222,40 @@ pseudoxml:
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
+# S5 SLIDES
+# s5 themes - small/medium/big-white/black/blue
+# themes='small-white', 'big-black'
+ifneq ($(S5SLIDES),)
+HTMLSLIDES = $(S5SLIDES:.txt=.html)
+endif
+s5slides:
+	mkdir -p $(BUILDDIR)/s5slides
+	export TEXMFHOME=$(TEXMF_PATH)
+	rst2s5.py --theme=default $(S5SLIDES) $(BUILDDIR)/s5slides/$(HTMLSLIDES)
+
+
+# BEAMER SLIDES
+ifneq ($(SLIDES),)
+SLIDESTEX = $(SLIDES:.txt=.tex)
+endif
+pdfslides:
+	mkdir -p $(BUILDDIR)/pdfslides
+	export TEXMFHOME=$(TEXMF_PATH)
+	rst2beamer --theme=PII $(SLIDES) $(BUILDDIR)/pdfslides/$(SLIDESTEX)
+	cd $(BUILDDIR)/pdfslides; export TEXMFHOME=$(TEXMF_PATH); pdflatex $(SLIDESTEX)
+
+ericslides:
+	mkdir -p $(BUILDDIR)/pdfslides
+	export TEXMFHOME=$(TEXMF_PATH)
+	rst2beamer --theme=ERIC $(SLIDES) $(BUILDDIR)/pdfslides/$(SLIDESTEX)
+	cd $(BUILDDIR)/pdfslides; export TEXMFHOME=$(TEXMF_PATH); pdflatex $(SLIDESTEX)
+
+
 # AAFIGURE
-aatxt = $(wildcard *.atxt)
-aafiles = $(aatxt:.atxt=.jpg)
+ifeq ($(AATEXT),)
+AATEXT = $(wildcard *.atxt)
+endif
+aafiles = $(AATEXT:.atxt=.jpg)
 aafig : $(aafiles)
 aafig-clean:
 	rm (BUILDDIR)/aafigure/$(aafiles)
@@ -244,8 +271,10 @@ aaoptions = -t jpg -f "\#000000" -x "\#000087" --proportional
 	@echo "==> Open with xdg-open *.jpg"
 
 # XMIND
-xmindtxt = $(wildcard *.xtxt)
-xmindfiles = $(xmindtxt:.xtxt=.xmind)
+ifeq ($(XMINDTXT),)
+XMINDTXT = $(wildcard *.xtxt)
+endif
+xmindfiles = $(XMINDTXT:.xtxt=.xmind)
 $(info Creating Xmind files for : $(xmindfiles))
 xmind : $(xmindfiles)
 xmind-clean:

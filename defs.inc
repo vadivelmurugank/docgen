@@ -15,4 +15,7 @@ XMINDGEN_PATH = $(DOCGEN)/xmindgen/
 # AAFIGURE
 AAFIGURE_PATH = $(DOCGEN)/aafigure
 
+# TEX MF PATH
+TEXMF_PATH = $(DOCGEN)/texmf
+
 

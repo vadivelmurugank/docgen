@@ -302,6 +302,18 @@ texinfo_documents = [
 #
 # texinfo_no_detailmenu = False
 
+#
+# -- Options for hieroglyph slides output -------------------
+
+# slide_title = html_title
+# autoslides = True
+# slide_theme = <slides, single-level, slides2, appear, fade-in>
+slide_theme = "slides2"
+slide_levels = 4
+#slide_numbers = True
+#slide_footer = "My Footer"
+
+
 
 # -- Options for Epub output ----------------------------------------------
 
