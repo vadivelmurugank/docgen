@@ -1,68 +1,66 @@
 ===========================================
             PROJECT DESIGN
 ===========================================
-  
+
+Design Synonyms
+--------------------------------------------------------------------
+
+* Data              - strings, numbers, binary
+* Meta-Data         - Hash, Schema
+* Mark up Language  - config
+* Compiler          - syntax, Semantics
+
+
+* processing        - CPU clock
+* Memory            - Data/Meta-Data Storage
+* Queues            - Priorities, Load Balance
+* Scheduler         - Execution, Atomic Locks, Synchronization
+* Exceptions        - Interrupts
+
 
 Purpose
-=======
+--------------------------------------------------------------------
 
-    * What is the problem statement?
+* What is the problem statement?
 
-        * Model the problem.
+    * Model the problem.
 
-            - Equation
+        - Equation
 
-    * How this Project solves the problem?
+* How this Project solves the problem?
 
-         * Use cases
+     * Use cases
 
-    * What is the value add? differentiator?
+* What is the value add? differentiator?
 
 
 
 Interface
-=========
+--------------------------------------------------------------------
 
-    * Command Line
+* Command Line
 
-    * Web/GUI
+* Web/GUI
 
-    * API
-
+* API
 
 
 Data Structure
-===============
+--------------------------------------------------------------------
 
-    * Data Abstraction
+* Data Abstraction
 
-    * Data Association
+* Data Association
 
-    * Data Struture
+* Data Struture
 
 
 Algorithms
-==========
+--------------------------------------------------------------------
 
-    * Arrange/Sort/Search
+* Arrange/Sort/Search
 
-    * Memory Allocate/layout
+* Memory Allocate/layout
 
-    * Queues/Slice/Schedule
-
-
-Design Synonyms
-===============
-
-    * Data              - strings, numbers, binary
-    * Meta-Data         - Hash, Schema
-    * Mark up Language  - config
-    * Compiler          - syntax, Semantics
-
-
-    * processing        - CPU clock
-    * Memory            - Data/Meta-Data Storage
-    * Queues            - Priorities, Load Balance
-    * Scheduler         - Execution, Atomic Locks, Synchronization
-    * Exceptions        - Interrupts
+* Queues/Slice/Schedule
 
