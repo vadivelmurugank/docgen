@@ -320,3 +320,21 @@ Publish Document to GIT gh-pages
     # Git clone with all submodules
         git clone --recursive -j8 https://github.com/vadivelmurugank/docs.git
 
+
+TODO
+-----------------
+
+* mathjax template mathematics symbols and equations
+* mathjax template physics, chemistry equations
+
+* hovercraft impress.js
+* hieroglyph extensions - pydot, numpy, ..
+
+* matplotlib diagrams
+    * Graphs
+    * Charts
+
+* Add web links to documentation processors
+
+
+
