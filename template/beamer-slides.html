@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Slides from reStructuredText &mdash;   documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="  documentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">DOCUMENTATION</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html"></a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Slides from reStructuredText</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/template/beamer-slides.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="slides-from-restructuredtext">
+<h1>Slides from reStructuredText<a class="headerlink" href="#slides-from-restructuredtext" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">Alan Glen Isaac</td>
+</tr>
+<tr class="field-even field"><th class="field-name">date:</th><td class="field-body">2010-09-06</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">source:</th><td class="field-body"><a class="reference external" href="rst2slides.rst">rst2slides.rst</a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="a-need">
+<h2>A Need<a class="headerlink" href="#a-need" title="Permalink to this headline">¶</a></h2>
+<p>One definite need is a test document that all slide writers
+should be able to handle.</p>
+<p>The present document has very low requirements.
+Because it does not include:</p>
+<ul class="simple">
+<li>subtitle</li>
+<li>sections</li>
+<li>subsections</li>
+</ul>
+<p>it is not an adequate test document.  (See below.)
+But certainly all writers should be able to handle the present document.</p>
+</div>
+<div class="section" id="some-problems">
+<h2>Some Problems<a class="headerlink" href="#some-problems" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>There is no settled reST slide format, so writers
+do not offer consistent handling</li>
+<li>The following are desirable but potential conflict:<ul>
+<li>title</li>
+<li>optional subtitle</li>
+<li>optional sections</li>
+<li>optional subsections</li>
+<li>implementing slides with standard reST sectioning<ul>
+<li>easier to write</li>
+<li>looks a lot better as text</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Lack of math support is pretty devastating.
+(Why hasn&#8217;t Jens work been moved to the docutils core,
+at least as an experimental feature?)</li>
+</ol>
+</div>
+<div class="section" id="solution-to-problem-2">
+<h2>Solution to Problem 2<a class="headerlink" href="#solution-to-problem-2" title="Permalink to this headline">¶</a></h2>
+<p>Possibility 1: the lowest section level present is always treated as a slides.
+(Note that if you want any slide in a sections or
+subsection, the first slides must be in a section
+and in a subsection.)  rst2beamer takes this approach;
+rst2s5 does not.  It seems to be a correct default.</p>
+<p>This default could be overridden with an option:
+<code class="docutils literal"><span class="pre">--slide-section-level=N</span></code></p>
+</div>
+<div class="section" id="test-suite">
+<h2>Test Suite<a class="headerlink" href="#test-suite" title="Permalink to this headline">¶</a></h2>
+<p>Here is a test suite based on the lowest subsection solution.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://subversion.american.edu/aisaac/misc/slides_test01.rst">http://subversion.american.edu/aisaac/misc/slides_test01.rst</a></li>
+<li><a class="reference external" href="http://subversion.american.edu/aisaac/misc/slides_test02.rst">http://subversion.american.edu/aisaac/misc/slides_test02.rst</a></li>
+<li><a class="reference external" href="http://subversion.american.edu/aisaac/misc/slides_test03.rst">http://subversion.american.edu/aisaac/misc/slides_test03.rst</a></li>
+<li><a class="reference external" href="http://subversion.american.edu/aisaac/misc/slides_test04.rst">http://subversion.american.edu/aisaac/misc/slides_test04.rst</a></li>
+</ul>
+</div>
+<div class="section" id="another-solution-to-problem-2">
+<h2>Another Solution to Problem 2<a class="headerlink" href="#another-solution-to-problem-2" title="Permalink to this headline">¶</a></h2>
+<p>Possibility 2 (suggested by Guenter Milde): slide writers should recognize a
+<code class="docutils literal"><span class="pre">slide</span></code> class on objects,
+putting any object tagged with this class into a slide.</p>
+<p>This would be excellent and very flexible.
+In this setting, he proposes that the option
+<code class="docutils literal"><span class="pre">--slide-section-level=N</span></code>
+simply tag all sections at that level.</p>
+<p>If the default is <code class="docutils literal"><span class="pre">--slide-section-level=0</span></code>
+and that means &#8220;tag the lowest subsection level&#8221;,
+this has a good fit with the previous proposed solution.</p>
+<p>A question: how to handle the case where two nested
+objects are both tagged with the <code class="docutils literal"><span class="pre">slide</span></code> class?</p>
+</div>
+<div class="section" id="additional-proposals-for-slide-writers">
+<h2>Additional Proposals for Slide Writers<a class="headerlink" href="#additional-proposals-for-slide-writers" title="Permalink to this headline">¶</a></h2>
+<p>Recognize the following special class arguments
+(proposed by G. Milde):</p>
+<dl class="docutils">
+<dt>overlay</dt>
+<dd>place object on a new &#8220;overlay&#8221; (which gives the appearance of
+incremental exposure of a given slide).</dd>
+<dt>notesonly</dt>
+<dd>do not place object on any slide (i.e. ignore when producing slides)
+(Achievable via docutils <code class="docutils literal"><span class="pre">strip-elements-with-class</span></code> setting).</dd>
+<dt>slidesonly</dt>
+<dd>do not place object in the notes (i.e. when generating
+standard HTML/LaTeX/PDF output for the handout or notes).
+(Achievable via docutils <code class="docutils literal"><span class="pre">strip-elements-with-class</span></code> setting).</dd>
+</dl>
+</div>
+<div class="section" id="id1">
+<h2>Additional Proposals for Slide Writers<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Additionally:
+it is important to be able to tag lists (at least)
+as say <code class="docutils literal"><span class="pre">incremental</span></code>, to signal to the writer to generate
+a sequence of overlays.</p>
+</div>
+<div class="section" id="html-slides-rst2s5">
+<h2>HTML Slides: rst2s5<a class="headerlink" href="#html-slides-rst2s5" title="Permalink to this headline">¶</a></h2>
+<p>rst2s5 is part of the standard docutils distribution.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rst2s5</span> <span class="o">--</span><span class="n">theme</span><span class="o">=</span><span class="n">small</span><span class="o">-</span><span class="n">white</span> <span class="n">slides</span><span class="o">.</span><span class="n">rst</span> <span class="n">slides</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>There is a useful introduction: <a class="reference external" href="http://docutils.sourceforge.net/docs/user/slide-shows.html">http://docutils.sourceforge.net/docs/user/slide-shows.html</a></p>
+</div>
+<div class="section" id="rst2s5-limitations">
+<h2>rst2s5 Limitations<a class="headerlink" href="#rst2s5-limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>no sectioning.</li>
+<li>browser font resizing is disabled</li>
+</ul>
+</div>
+<div class="section" id="rst2s5-improvement-suggestions">
+<h2>rst2s5 Improvement Suggestions<a class="headerlink" href="#rst2s5-improvement-suggestions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>allow slides to be within sections and subsections<ul>
+<li>display these instead of the title at the bottom</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="pdf-slides-rst2pdf">
+<h2>PDF Slides: rst2pdf<a class="headerlink" href="#pdf-slides-rst2pdf" title="Permalink to this headline">¶</a></h2>
+<p>Solution: <code class="docutils literal"><span class="pre">rst2pdf</span></code></p>
+<ul class="simple">
+<li>available on Pypi.</li>
+<li>available from <a class="reference external" href="http://code.google.com/p/rst2pdf/">http://code.google.com/p/rst2pdf/</a></li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rst2pdf</span> <span class="o">-</span><span class="n">b2</span> <span class="o">-</span><span class="n">s</span> <span class="n">a4</span><span class="o">-</span><span class="n">landscape</span> <span class="o">-</span><span class="n">o</span> <span class="n">c</span><span class="p">:</span>\<span class="n">temp</span>\<span class="n">temp</span><span class="o">.</span><span class="n">pdf</span> <span class="n">slides</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+<p>There is a helpful <a class="reference external" href="http://rst2pdf.googlecode.com/svn/trunk/doc/manual.txt">rst2pdf manual</a>
+You may also want to look Roberto Alsina&#8217;s <a class="reference external" href="http://lateral.netmanagers.com.ar/static/rst2pdf-slides/slides.style">slides.style</a>.</p>
+</div>
+<div class="section" id="rst2pdf-limitations">
+<h2>rst2pdf Limitations<a class="headerlink" href="#rst2pdf-limitations" title="Permalink to this headline">¶</a></h2>
+<p>rst2pdf has</p>
+<ul class="simple">
+<li>math directive and role</li>
+<li>great flexibility of style</li>
+</ul>
+<p>So with the right style file, there may be no limitations
+relevant to this summary.  But</p>
+<ul class="simple">
+<li>be sure to upgrade to latest ReportLab to get PNG images to work</li>
+<li>there is no support for PDF 1.6 images</li>
+<li>I don&#8217;t know how to do incremental revelation of slide material</li>
+<li>I like beamer&#8217;s handling of sections and subsections
+(i.e., display in headers or footers, not on separate slides)
+but I don&#8217;t know how to get that from rst2pdf</li>
+</ul>
+</div>
+<div class="section" id="pdf-slides-rst2beamer">
+<h2>PDF Slides: rst2beamer<a class="headerlink" href="#pdf-slides-rst2beamer" title="Permalink to this headline">¶</a></h2>
+<p>Solution: <code class="docutils literal"><span class="pre">rst2beamer</span></code></p>
+<ul class="simple">
+<li>old version available on Pypi (authors are Ryan Krauss and Paul-Michael) has some bugs.</li>
+<li>working version is in docutils sandbox</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rst2beamer</span> <span class="n">slides</span><span class="o">.</span><span class="n">rst</span> <span class="n">slides</span><span class="o">.</span><span class="n">tex</span>
+<span class="n">pdflatex</span> <span class="n">slides</span><span class="o">.</span><span class="n">tex</span> <span class="n">slides</span><span class="o">.</span><span class="n">pdf</span>
+</pre></div>
+</div>
+<p>Quick notes: <a class="reference external" href="http://www.agapow.net/software/rst2beamer">http://www.agapow.net/software/rst2beamer</a></p>
+<p>Comment: this solution produces very good looking output.</p>
+</div>
+<div class="section" id="rst2beamer-limitations">
+<h2>rst2beamer Limitations<a class="headerlink" href="#rst2beamer-limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>unlike rst2latex, Unicode characters are not translated</li>
+<li>no math directive or role
+- but can add math as raw LaTeX</li>
+<li>every slide is assigned <code class="docutils literal"><span class="pre">fragile</span></code> option -&gt; amsmath is broken</li>
+<li>every slide is incremental by default (ugh!); cannot turn
+on incremental on per-slide basis.  However, can turn off
+incremental for the whole set with <code class="docutils literal"><span class="pre">--overlaybullets=False</span></code>.</li>
+<li>literal text handling is partly broken; it should copy the
+approach in rst2latex</li>
+<li>suppose you want a one row, two-column table with a figure
+in one cell and a related list in the other (i.e., a standard
+presentation slide style).  rst2beamer will not be correctly format this.
+(Nor will rst2latex, for that matter.)</li>
+</ul>
+</div>
+<div class="section" id="rst2beamer-improvement-suggestions">
+<h2>rst2beamer Improvement Suggestions<a class="headerlink" href="#rst2beamer-improvement-suggestions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>use classes (e.g., <code class="docutils literal"><span class="pre">fragile</span></code>, <code class="docutils literal"><span class="pre">incremental</span></code>) to switch
+on options.  Don&#8217;t make slides fragile and incremental by
+default.</li>
+<li>handle literal text like rst2latex does; the current
+approach does not work correctly</li>
+<li>handle math like rst2latexmath does</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>rst2beamer Improvement Suggestions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Here is a reason not to set the <code class="docutils literal"><span class="pre">fragile</span></code> option by default:</p>
+<blockquote>
+<div>12.9     Verbatim and Fragile Text
+If you wish to use a {verbatim} environment in a frame,
+you have to add the option [fragile] to the {frame}
+environment. In this case, you really have to use the
+{frame} environment (not the frame command) and the
+end{frame} must be alone on a single line. Using this
+option will cause the frame contents to be written to an
+external file and then read back. See the description of
+the {frame} environment for more details.</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>rst2beamer Improvement Suggestions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>An example implication: suppose you put in a slide:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">latex</span>
+
+   \<span class="p">[</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> \<span class="p">]</span>
+</pre></div>
+</div>
+<p>Then rst2beamer will write a document that won&#8217;t compile
+(because the fragile option is set, but <code class="docutils literal"><span class="pre">\end{frame}</span></code>
+will not be on its own line).  However this can be fixed
+by adding an reST comment line.</p>
+</div>
+<div class="section" id="odp-slides">
+<h2>ODP Slides<a class="headerlink" href="#odp-slides" title="Permalink to this headline">¶</a></h2>
+<p>Solution: rst2odp</p>
+<ul class="simple">
+<li>available on PyPI</li>
+<li>development version in docutils sandbox</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rst2opd</span> <span class="n">slides</span><span class="o">.</span><span class="n">rst</span> <span class="n">slides</span><span class="o">.</span><span class="n">odp</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rst2odp-limitations">
+<h2>rst2odp Limitations<a class="headerlink" href="#rst2odp-limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>does not handle subtitle</li>
+<li>does not handle citations</li>
+<li>I have not been able to get it to work</li>
+</ul>
+</div>
+<div class="section" id="powerpoint-slides">
+<h2>PowerPoint Slides<a class="headerlink" href="#powerpoint-slides" title="Permalink to this headline">¶</a></h2>
+<p>Solution: rst2outline <a class="reference external" href="http://docutils.sourceforge.net/sandbox/rst2outline/">http://docutils.sourceforge.net/sandbox/rst2outline/</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rst2outline</span> <span class="n">slides</span><span class="o">.</span><span class="n">rst</span> <span class="n">slides</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">powerpnt</span><span class="o">.</span><span class="n">exe</span> <span class="n">slides</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>This solution takes advantage of how PowerPoint reads plain text files
+(as described at <a class="reference external" href="http://www.pptfaq.com/FAQ00246.htm">http://www.pptfaq.com/FAQ00246.htm</a>).</p>
+</div>
+<div class="section" id="rst2outline-limitations">
+<h2>rst2outline Limitations<a class="headerlink" href="#rst2outline-limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>only handles text</li>
+<li>no title, subtitle, or sectioning</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

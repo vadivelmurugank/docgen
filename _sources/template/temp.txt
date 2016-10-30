@@ -1,0 +1,157 @@
+..  Command: rst2html.py temp.txt temp.html
+.. /project/pcb/evadkan/python/anaconda3/bin/rst2html.py
+
+
+*****************************************
+  Template for reStructured Text
+*****************************************
+
+..toctree:: 
+    :maxdepth: 2
+
+.. Include other  txt/rst files here
+
+.. sectnum::
+.. contents:: Table Of Contents
+.. header:: Tarantula Diags Reference
+.. |date| date::
+.. |time| date:: %H.%M
+.. footer::  |date| |time|
+
+.. |image| image:: images/Variable.jpg
+    :alt: Variable
+    :target: images/Variable.jpg
+    :align: middle
+
+
+.. note:: This is a template file for  ReStructured text
+
+.. Comment: This line will not be processed and displayed
+
+===========
+ PORTMOD
+===========
+
+TABLE BLOCK
+***********
+
+     +--------+------+--------------------+------------+----------------+
+     | LABEL1 | L1   |    L2              |  L3        |    L4          |
+     +--------+------+--------------------+------------+----------------+
+     |  0     |      | FIRST LINE         |  4         |   NONE         |
+     |        |      |                    |            |                |
+     |        |      | SECOND LINE        |  5         |   LIST         |
+     |        |      |                    |            |                |
+     |        |      | THIRD PARAGRAPH    |  6         |                |
+     +--------+------+--------------------+------------+----------------+
+     |  1     |      | FIRST LINE         |  4         |   NONE         |
+     |        |      |                    |            |                |
+     |        |      | SECOND LINE        |  5         |   LIST         |
+     |        |      |                    |            |                |
+     |        |      | THIRD PARAGRAPH    |  6         |                |
+     +--------+------+--------------------+------------+----------------+
+
+CSV-TABLE BLOCK
+***************
+
+.. csv-table:: a title
+   :header: "first header", "second header", "third header"
+   :widths: 20, 20, 10
+
+   "item 1", "item 2", 3
+   "item 4", "item 5", 5
+
+
+SECTION BLOCKS
+**************
+    BLOCK DESCRIPTIONS
+
+LINK DESCRIPTION
+#################
+
+    Here is my `hithub link <https://github.com/vadivelmurugank/picothing>`_
+
+MODULE 3
+*********
+
+=================
+ LIST BLOCKS
+=================
+
+    #. LIST1
+
+       PARAGRAPH 1
+
+    #. LIST 2
+
+       PARAGRAPH 2
+
+    #. LIST 3
+
+       PARAGRAPH 3
+
+==============
+ MATH BLOCKS
+==============
+
+Firt Math Equation :math:`\alpha > \beta`
+
+Complex math :math:`n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k`
+
+.. Comment: The below will have the formulae centered
+
+.. math:: 
+
+    n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
+
+
+==============
+ SIDEBAR
+==============
+
+.. sidebar:: Sidebar Title
+        :subtitle: Optional Sidebar Subtitle
+
+   Subsequent indented lines comprise
+   the body of the sidebar, and are
+   interpreted as body elements.
+
+==============
+ CODE BLOCK
+==============
+
+.. code:: python
+	
+	print("Hello World")
+
+
+.. code:: text
+
+	This is a text format
+
+.. code:: raw
+
+	This is a raw format
+
+.. code:: c
+
+	void c_function_code()
+	{
+		printf("C function code \n");
+	}
+
+==============
+    PDF BLOCK
+==============
+
+PDF File :download:`pdf <images/slides.pdf>`
+
+==============
+ IMAGE BLOCKS
+==============
+
+Here is the image:
+|image|
+
+
+

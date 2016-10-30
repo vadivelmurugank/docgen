@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DOCUMENTATION &mdash;   documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="  documentation" href="index.html"/>
+        <link rel="prev" title="Indices and tables" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DOCUMENTATION</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#philosophy">Philosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documents-and-presentations">Documents and Presentations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#html">html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hieroglyph">hieroglyph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hovercraft-impress-js">hovercraft - impress.js</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rst2beamer">rst2beamer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#doxygen">doxygen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#block-diagrams">Block diagrams</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#blockdiag">blockdiag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xmind">xmind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aafigure">aafigure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#docgen-framework">DOCGEN FRAMEWORK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install">install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docgen">docgen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#clone-docgen-make-framework">Clone docgen Make framework</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-targets">Make targets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#docgen-builds">Docgen builds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#publish-document-to-git-gh-pages">Publish Document to GIT gh-pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html"></a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>DOCUMENTATION</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/README.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documentation">
+<h1>DOCUMENTATION<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="philosophy">
+<h2>Philosophy<a class="headerlink" href="#philosophy" title="Permalink to this headline">¶</a></h2>
+<p>WYSIWYM : WHAT YOU SEE IS WHAT YOU MEAN ( not GET)</p>
+<p>Doc Framework to totally separate presentation and content: users can structure and write the document once, rather than repeatedly altering it for each mode of presentation.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Use Document processor rather than word processed is used.</li>
+<li>Write in text file and publish is any global format</li>
+<li>Version control of each content</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="documents-and-presentations">
+<h2>Documents and Presentations<a class="headerlink" href="#documents-and-presentations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="html">
+<h3>html<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>sphinx - html/pdf/latex</dt>
+<dd>sphinx-build -b html ..</dd>
+</dl>
+</div>
+<div class="section" id="hieroglyph">
+<h3>hieroglyph<a class="headerlink" href="#hieroglyph" title="Permalink to this headline">¶</a></h3>
+<p>generate HTML5 Presentations</p>
+</div>
+<div class="section" id="hovercraft-impress-js">
+<h3>hovercraft - impress.js<a class="headerlink" href="#hovercraft-impress-js" title="Permalink to this headline">¶</a></h3>
+<p>Create impress.js presentation slides from restructure text</p>
+</div>
+<div class="section" id="rst2beamer">
+<h3>rst2beamer<a class="headerlink" href="#rst2beamer" title="Permalink to this headline">¶</a></h3>
+<p>rst2beamer - Ast file to Presentation</p>
+</div>
+<div class="section" id="doxygen">
+<h3>doxygen<a class="headerlink" href="#doxygen" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>doxygen -  Doxygen Documentation</dt>
+<dd>doxygen -f doxy.file</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="block-diagrams">
+<h2>Block diagrams<a class="headerlink" href="#block-diagrams" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="blockdiag">
+<h3>blockdiag<a class="headerlink" href="#blockdiag" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>python -m  &lt;blockdiag&gt;  &lt;diag.py&gt;</p>
+<p>blockdiag
+seqdiag
+actdiag
+nwdiag</p>
+<p>packetdiag
+rackdiag</p>
+<dl class="docutils">
+<dt>blockdiagrams/</dt>
+<dd>actdia
+blockdia
+nwdia
+packetdia
+seqdia</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="xmind">
+<h3>xmind<a class="headerlink" href="#xmind" title="Permalink to this headline">¶</a></h3>
+<p>xmind - Xmindmap</p>
+</div>
+<div class="section" id="aafigure">
+<h3>aafigure<a class="headerlink" href="#aafigure" title="Permalink to this headline">¶</a></h3>
+<p>aafigure - Ascii to jpeg</p>
+</div>
+</div>
+<div class="section" id="docgen-framework">
+<h2>DOCGEN FRAMEWORK<a class="headerlink" href="#docgen-framework" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install">
+<h3>install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="first docutils">
+<dt>sphinx</dt>
+<dd><p class="first last">pip3 install sphinx docutils</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>slides</dt>
+<dd><p class="first last">pip3 install hieroglyph sphinx_rtd_theme
+pip3 install hovercraft configparser</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>diagram</dt>
+<dd><p class="first last">pip3 install matplotlib
+pip3 install blockdiag seqdiag actdiag nwdiag
+pip3 install packetdiag rackdiag
+pip3 install aafig text2mind</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="docgen">
+<h3>docgen<a class="headerlink" href="#docgen" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="clone-docgen-make-framework">
+<h4>Clone docgen Make framework<a class="headerlink" href="#clone-docgen-make-framework" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="make-targets">
+<h4>Make targets<a class="headerlink" href="#make-targets" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="docgen-builds">
+<h4>Docgen builds<a class="headerlink" href="#docgen-builds" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>Makefile for doc:</p>
+<blockquote>
+<div>include $(HOME)/github/docgen/defs.inc
+include $(DOCGEN_PATH)/rules.doc</div></blockquote>
+<p>Make targets:</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="publish-document-to-git-gh-pages">
+<h2>Publish Document to GIT gh-pages<a class="headerlink" href="#publish-document-to-git-gh-pages" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">mathjax template mathematics symbols and equations</p>
+</li>
+<li><p class="first">mathjax template physics, chemistry equations</p>
+</li>
+<li><p class="first">hovercraft impress.js</p>
+</li>
+<li><p class="first">hieroglyph extensions - pydot, numpy, ..</p>
+</li>
+<li><dl class="first docutils">
+<dt>matplotlib diagrams</dt>
+<dd><ul class="first last simple">
+<li>Graphs</li>
+<li>Charts</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Add web links to documentation processors</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Indices and tables" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
