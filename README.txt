@@ -137,17 +137,8 @@ aafigure - Ascii to jpeg
     python2 ~/scripts/docgen/aafigure/aafigure.py ~/ascii.txt -t jpg -o ~/ascii.jpg -f "#00ff87" -x "#000087" --proportional
 
 
-
-
-Slide Presentation
--------------------
-
-
-
-
 DOCGEN FRAMEWORK
 -------------------------------------------------------------------
-
 
 install
 ~~~~~~~~~~
