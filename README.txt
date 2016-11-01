@@ -309,7 +309,11 @@ Publish Document to GIT gh-pages
         git submodule update --init --recursive
 
     # Git clone with all submodules
-        git clone --recursive -j8 https://github.com/vadivelmurugank/docs.git
+        git clone --recursive https://github.com/vadivelmurugank/docs.git
+
+    # Git pull with all submodules
+        git pull --recurse-submodules
+        git pull && git submodule init && git submodule update && git submodule status
 
 
 TODO
