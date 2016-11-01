@@ -175,6 +175,7 @@ Make targets
     docgen/sphinx/rules.doc
 
     docgen/defs.inc:
+
         # Defs
 
         DOCGEN = $(HOME)/picothing/scripts/docgen
@@ -199,13 +200,13 @@ Make targets
 Docgen builds
 **************
 
-    Makefile for doc:
+Makefile for doc:
 
-        include $(HOME)/github/docgen/defs.inc
-        include $(DOCGEN_PATH)/rules.doc
+    include $(HOME)/github/docgen/defs.inc
+    include $(DOCGEN_PATH)/rules.doc
 
 
-    Make targets:
+Make targets:
 
     .. code-block::
         
@@ -247,6 +248,11 @@ Docgen builds
 
         # Create xmind map files
         make xmind XMINDTXT="xmindtxt.txt"
+
+    .. code-block::
+
+        # publish changes
+        make publish
 
 
 Publish Document to GIT gh-pages
@@ -309,7 +315,15 @@ Publish Document to GIT gh-pages
         git submodule update --init --recursive
 
     # Git clone with all submodules
-        git clone --recursive -j8 https://github.com/vadivelmurugank/docs.git
+        git clone --recursive https://github.com/vadivelmurugank/docs.git
+
+    # Git pull with all submodules
+        git pull --recurse-submodules
+        git pull && git submodule init && git submodule update && git submodule status
+
+    # git commit
+        git push -u origin master
+        git push -u origin gh-pages
 
 
 TODO
