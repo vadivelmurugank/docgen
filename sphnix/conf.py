@@ -40,6 +40,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.mathjax',
+    'sphinx.ext.graphviz',
     'matplotlib.sphinxext.plot_directive',
     'hieroglyph'
 ]
@@ -123,10 +124,11 @@ todo_include_todos = False
 # a list of builtin themes.
 # themes = alabaster, bootstrap, sphinx_rtd_theme, classic, scrolls,
 # sphinxdoc, agogo, traditional, nature, haiku, pyramid, bizstyle
+import sphinx_rtd_theme
 html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_theme_options = {
     'collapse_navigation': True,
-    'navigation_depth': 7,
     'sticky_navigation': False
 }
 
@@ -154,7 +156,7 @@ html_theme_options = {
 #}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = ["_themes"]
+#html_theme_path = ["_themes", ]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
