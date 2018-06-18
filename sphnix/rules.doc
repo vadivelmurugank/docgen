@@ -281,7 +281,7 @@ ifeq ($(XMINDTXT),)
 XMINDTXT = $(wildcard *.xtxt)
 endif
 xmindfiles = $(XMINDTXT:.xtxt=.xmind)
-$(info Creating Xmind files for : $(xmindfiles))
+#$(info Creating Xmind files for : $(xmindfiles))
 xmind : $(xmindfiles)
 xmind-clean:
 	/bin/rm -f $(BUILDDIR)/xmind/$(xmindfiles)
@@ -293,3 +293,6 @@ xmindgen = $(XMINDGEN_PATH)/text2xmind.py
 	scp $< $(BUILDDIR)/xmind/$<
 	cd $(BUILDDIR)/xmind; $(python)  $(xmindgen) $< 
 
+gen:
+	$(info creating index.txt..)
+	$(python) $(XMINDGEN_PATH)/../scripts/gen_index.py
