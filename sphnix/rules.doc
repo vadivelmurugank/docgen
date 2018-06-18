@@ -40,6 +40,8 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(CURDIR)
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "  gen        Generate index.txt files automatically"
+	@echo "  startweb   Start webserver with python to server static pages"
 	@echo "  slides     to make XHTML slides with sphinx.hieroglyph extension"
 	@echo "  pdfslides  to make slides in pdf with rst2beamer and pdflatex"
 	@echo "  aafig      to make images from ascii figure text"
@@ -296,3 +298,8 @@ xmindgen = $(XMINDGEN_PATH)/text2xmind.py
 gen:
 	$(info creating index.txt..)
 	$(python) $(XMINDGEN_PATH)/../scripts/gen_index.py
+
+startweb:
+	$(info starting simple webserver port 8999..)
+	$(python) -m http.server --cgi 8999
+
