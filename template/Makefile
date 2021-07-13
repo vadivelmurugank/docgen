@@ -1,5 +1,5 @@
 
-include $(HOME)/github/docgen/defs.inc
+include $(HOME)/mygit/docgen/defs.inc
 include $(DOCGEN_PATH)/rules.doc
 
 SLIDES = beamer-slides.txt

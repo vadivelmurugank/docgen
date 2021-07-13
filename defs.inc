@@ -1,6 +1,6 @@
 # Defs
 
-DOCGEN = $(HOME)/github/docgen
+DOCGEN = $(HOME)/mygit/docgen
 
 
 python = /usr/bin/python2
