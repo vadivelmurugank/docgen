@@ -67,9 +67,14 @@ if (__name__ == "__main__"):
             if topheadwrite == 0:
                 findex.write(topheader)
                 topheadwrite = 1
+            #print("parent:", parent)
+            findex.write('='*80+'\n')
+            findex.write((os.path.basename(os.path.abspath(parent))).upper()+'\n')
+            findex.write('='*80+'\n')
             headerfile = os.path.join(parent, head_file)
             if (os.path.isfile(headerfile)):
                 with open(headerfile) as hf:
+                    findex.seek(0,0)
                     for line in hf:
                         findex.write(line)
             findex.write(tocheader)
